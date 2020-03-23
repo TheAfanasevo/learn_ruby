@@ -14,6 +14,8 @@
 # second group
 # \w* the whole group of characters after the first group
 
+# /i for case insensitivity
+
 def translate text
-    text.gsub!(/(\b[aeiou]\w*|\bqu|\b[^\saeiou]qu|\b[^\saeiou]{1,3}|\b[^\saeiou])(\w*)/, '\\2\\1ay')
+    text.gsub!(/(\b[aeiou]\w*|\bqu|\b[^\saeiou]qu|\b[^\saeiou]{1,3}|\b[^\saeiou])(\w*)/i, '\\2\\1ay')
 end
